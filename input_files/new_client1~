@@ -1,0 +1,24 @@
+share "images/deer illustration.jpg"
+
+search "Bob.txt"
+
+search "deer"
+
+get "1" "Giant Maneating Deer.jpg"
+
+search "tree"
+
+search "tree"
+
+get "2" "a_bunch_of_what"
+
+get "2" "rolling stones vid.mp4"
+
+get "2" ""
+
+exec "2" "who"
+
+share "video files/large_video_file.mp4"
+
+
+

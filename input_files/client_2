@@ -1,0 +1,11 @@
+share "images/tree.png"
+
+share "text/TREE this is not.c"
+
+share "video files/sample video file - \'Paint It Black\'.mp4"
+
+del "video files/sample video file - \'Paint It Black\'.mp4"
+
+exec "Client 1" "hostname"
+
+get "Client 1" "video files/large_video_file.mp4" large.mp4

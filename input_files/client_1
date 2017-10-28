@@ -1,0 +1,21 @@
+share "images/deer illustration.jpg" 
+
+search Bob.txt
+
+search deer
+
+get [1] "Giant Maneating Deer.jpg"
+
+search tree
+
+search tree
+
+get [2] "a_bunch_of_what"
+
+get "Client 2" "video files/sample video file - \'Paint It Black\'.mp4" "rolling stones vid.mp4"
+
+get "Client 2" "video files/sample video file - \'Paint It Black\'.mp4" "stationary stones.mp4"
+
+exec "Client 2" "who"
+
+share "video files/large_video_file.mp4"

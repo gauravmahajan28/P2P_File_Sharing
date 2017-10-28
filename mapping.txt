@@ -1,0 +1,2 @@
+deer illustration.jpg:images/:Gaurav Computer
+tree.png:images/:Gaurav Computer

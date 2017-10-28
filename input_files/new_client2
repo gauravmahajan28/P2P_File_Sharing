@@ -1,0 +1,17 @@
+share "images/tree.png"
+
+share "text/TREE this is not C.c"
+
+share "video files/sample video file - \'Paint It Black\'.mp4"
+
+del "video files/sample video file - \'Paint It Black\'.mp4"
+
+search "deer"
+
+exec "1" "hostname"
+
+search "large_video"
+
+get "1" "large.mp4"
+
+

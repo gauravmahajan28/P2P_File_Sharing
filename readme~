@@ -1,0 +1,56 @@
+make -> creates two executables server client
+
+start server
+ ./server 127.0.0.1 8081 mapping.txt temp.txt /home/gaurav/Desktop/IIIT_Material/sem1/OS/Assign_2/
+
+server creates one UDP thread to listen to heart beats on SAME port
+
+server creates one separate thread per request for CRS request
+
+
+keep mapping file empty at start.
+** presence of file is complusory **
+
+have not handled . and .. with respect to relative path.
+Whatever path is entered, it is concatenated with rootLocation
+
+
+Client and Server root address should be complete from root till /
+e.g. /home/gaurav/Desktop/
+
+
+start client
+./client "Gaurav Computer" 127.0.0.1 8082 127.0.0.1 8081 14000 /home/gaurav/Desktop/IIIT_Material/sem1/OS/Assign_2/
+
+Client creates 3 threads
+
+1) one to handle outgoing CRS request
+2) one to handle file upload service / RPC service
+3) one to send heart beats to CRS
+
+
+formats
+
+search "myimage.JPG"
+
+
+
+share "/test.pdf"
+share "client1/test.pdf"
+
+del "/test.pdf"
+del "client1/test.pdf"
+
+
+only below formats are supported for get and exec
+
+get "1" "opfilename"
+
+exec "1" "ls -lr"
+
+note, command will be executed where client is running
+
+
+logging files are created for each day on server as well as at client
+
+

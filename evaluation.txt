@@ -1,0 +1,284 @@
+starting server
+
+at assign_2 folder level:
+make sure all files mapping.txt and temp.txt are existing
+
+
+file download request and RPC calls are entertained on same port with thread pool and multithreaded architecture
+
+
+
+
+./server 127.0.0.1 8081 mapping.txt temp.txt /home/gaurav/Desktop/IIIT_Material/sem1/OS/Assign_2/
+
+
+client1 :
+
+./client "Gaurav Computer" 127.0.0.1 8082 127.0.0.1 8081 14000 /home/gaurav/Desktop/IIIT_Material/sem1/OS/Assign_2/
+
+
+client2:
+
+./client "Gaurav2 Computer" 127.0.0.1 8083 127.0.0.1 8081 14000 /home/gaurav/Desktop/IIIT_Material/sem1/OS/Assign_2/
+
+
+client1 commands:
+
+share "images/deer illustration.jpg"
+
+search "Bob.txt"
+
+search "deer"
+
+get "1" "Giant Maneating Deer.jpg"
+
+search "tree"
+
+search "tree"
+
+get "2" "a_bunch_of_what"
+
+get "2" ""
+
+get "2" ""
+
+exec "2" "who"
+
+share "video files/large_video_file.mp4"
+
+
+
+
+client 2 commands
+
+share "images/tree.png"
+
+share "text/TREE this is not C.c"
+
+share "video files/sample video file - \'Paint It Black\'.mp4"
+
+del "video files/sample video file - \'Paint It Black\'.mp4"
+
+search "deer"
+
+exec "1" "hostname"
+
+search "large_video"
+
+get "1" "large.mp4"
+
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+
+What is happening :
+
+1) logging is done date wise
+
+2) starting file server.cpp
+
+maintaining pool of 1000 threads
+
+1) main thread keep listening to tcp requests
+
+2) other thread is started on UDP port to listen to heart beats from clients
+
+3) other threads remove silent clients
+
+4) online clients need not be maintained in file as that is overhead and is not used
+
+5) maintaining mutex locking where threads may be updating common data structure
+
+5) maintaining mutex locking where threads may be updating common data structure
+
+5) maintaining mutex locking where threads may be updating common data structure
+
+5) maintaining mutex locking where threads may be updating common data structure
+
+6) maintaining mutex locking where threads may be updating common data structure
+
+
+7) mapping from fileName to list of hosts
+
+8) though of maintaining another map from host to list of files
+
+9) if same file is added again, on mapping file , it would be immediately added as new line, in data stru, it would be added in list
+
+
+10) updates like share and del are immediately reflected in file
+
+
+11) server maintians another map called online clients with timeout
+
+whenever server received heart beat, it adds timeout by 1 min
+
+11) server maintians another map called online clients with timeout
+
+whenever server received heart beat, it adds timeout by 1 min
+
+11) server maintians another map called online clients with timeout
+
+whenever server received heart beat, it adds timeout by 1 min
+
+11) server maintians another map called online clients with timeout
+
+whenever server received heart beat, it adds timeout by 1 min
+
+11) server maintians another map called online clients with timeout
+
+whenever server received heart beat, it adds timeout by 1 min
+
+11) server maintians another map called online clients with timeout
+
+whenever server received heart beat, it adds timeout by 1 min
+
+11) server maintians another map called online clients with timeout
+
+whenever server received heart beat, it adds timeout by 1 min
+
+11) server maintians another map called online clients with timeout
+
+whenever server received heart beat, it adds timeout by 1 min
+
+11) server maintians another map called online clients with timeout
+
+whenever server received heart beat, it adds timeout by 1 min
+
+11) server maintians another map called online clients with timeout
+
+whenever server received heart beat, it adds timeout by 1 min
+
+11) server maintians another map called online clients with timeout
+
+whenever server received heart beat, it adds timeout by 1 min
+
+12) clear silent clients just checks this timeout and removed from this map
+
+13) any request which is answers will check above map before returning results
+
+12) clear silent clients just checks this timeout and removed from this map
+
+13) any request which is answers will check above map before returning results
+
+12) clear silent clients just checks this timeout and removed from this map
+
+13) any request which is answers will check above map before returning results
+
+12) clear silent clients just checks this timeout and removed from this map
+
+13) any request which is answers will check above map before returning results
+
+12) clear silent clients just checks this timeout and removed from this map
+
+13) any request which is answers will check above map before returning results
+
+12) clear silent clients just checks this timeout and removed from this map
+
+13) any request which is answers will check above map before returning results
+
+12) clear silent clients just checks this timeout and removed from this map
+
+13) any request which is answers will check above map before returning results
+
+12) clear silent clients just checks this timeout and removed from this map
+
+13) any request which is answers will check above map before returning results
+
+12) clear silent clients just checks this timeout and removed from this map
+
+13) any request which is answers will check above map before returning results
+
+12) clear silent clients just checks this timeout and removed from this map
+
+13) any request which is answers will check above map before returning results
+
+12) clear silent clients just checks this timeout and removed from this map
+
+13) any request which is answers will check above map before returning results
+
+12) clear silent clients just checks this timeout and removed from this map
+
+13) any request which is answers will check above map before returning results
+
+14) all protocols internally adds # as token separator
+
+15) lock maintain whenever there is updatiion on common files like mapping file and online clients map etc
+
+
+16)15) lock maintain whenever there is updatiion on common files like mapping file and online clients map etc
+
+
+16)15) lock maintain whenever there is updatiion on common files like mapping file and online clients map etc
+
+
+16)15) lock maintain whenever there is updatiion on common files like mapping file and online clients map etc
+
+
+16)15) lock maintain whenever there is updatiion on common files like mapping file and online clients map etc
+
+
+16)15) lock maintain whenever there is updatiion on common files like mapping file and online clients map etc
+
+
+16)15) lock maintain whenever there is updatiion on common files like mapping file and online clients map etc
+
+
+16)15) lock maintain whenever there is updatiion on common files like mapping file and online clients map etc
+
+
+16)15) lock maintain whenever there is updatiion on common files like mapping file and online clients map etc
+
+
+16)15) lock maintain whenever there is updatiion on common files like mapping file and online clients map etc
+
+
+16)15) lock maintain whenever there is updatiion on common files like mapping file and online clients map etc
+
+
+16)15) lock maintain whenever there is updatiion on common files like mapping file and online clients map etc
+
+
+16)15) lock maintain whenever there is updatiion on common files like mapping file and online clients map etc
+
+
+16)15) lock maintain whenever there is updatiion on common files like mapping file and online clients map etc
+
+
+16)15) lock maintain whenever there is updatiion on common files like mapping file and online clients map etc
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+
+client starts 3 threads
+
+1) one to track keyboard ip to send to CRS : it is single threadded
+
+2) one to track incoming file download request : it spawns multiple threads inside : multithreaded
+
+3) one to send heart beat to CRS 
+
+4) simultaneous file download threads : 100 : can be decided based on arhci
+
+5) before sharing file, location is checked to confirm presense of file
+
+6) since get and exec happen on prev search entry, appropriate error messages are displayed if used without searching
+
+7) heart beats are sent every 30 sec
+
+7) heart beats are sent every 30 sec
+
+7) heart beats are sent every 30 sec
+
+7) heart beats are sent every 30 sec
+
+7) heart beats are sent every 30 sec
+
+7) heart beats are sent every 30 sec
+
+7) heart beats are sent every 30 sec
+
+7) clear silent clients is done every 2 mins
+
+
